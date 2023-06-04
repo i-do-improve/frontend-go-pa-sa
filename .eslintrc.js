@@ -30,5 +30,6 @@ module.exports = {
         format: ['PascalCase'],
       },
     ],
+    'no-trailing-spaces': ['error', { 'ignoreComments': false }],
   }
 };
