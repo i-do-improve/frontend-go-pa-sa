@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HomeIcon } from '../Icon';
+import { HomeIcon, CommandIcon } from '../Icon';
 import NextLink from 'next/link';
 
 function NavigationBar() {
@@ -11,13 +11,12 @@ function NavigationBar() {
           홈
         </Li>
       </Link>
-      <Link href="/">
+      <Link href="/categories">
         <Li>
-          <HomeIcon />
+          <CommandIcon />
           카테고리
         </Li>
       </Link>
-      <h1>카테고리</h1>
       <h1>검색</h1>
       <h1>로그인/가입</h1>
     </Ul>
