@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HomeIcon, CommandIcon } from '../Icon';
+import { HomeIcon, CommandIcon, SearchIcon } from '../Icon';
 import NextLink from 'next/link';
 
 function NavigationBar() {
@@ -17,7 +17,12 @@ function NavigationBar() {
           카테고리
         </Li>
       </Link>
-      <h1>검색</h1>
+      <Link href="/search">
+        <Li>
+          <SearchIcon />
+          검색
+        </Li>
+      </Link>
       <h1>로그인/가입</h1>
     </Ul>
   );
@@ -41,6 +46,7 @@ const Li = styled.li`
   justify-content: center;
   align-items: center;
   font-size: 11px;
+  font-weight: 700;
 `;
 
 export default NavigationBar;
