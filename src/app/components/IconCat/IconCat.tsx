@@ -2,13 +2,19 @@ import styled from 'styled-components';
 import NextImage from 'next/image';
 
 interface IconCatProps {
-  color?: string;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
   hover?: boolean;
+  color?: string;
 }
 
-function IconCat({ color, hover = false }: IconCatProps) {
+function IconCat({ onMouseEnter, onMouseLeave, color, hover = false }: IconCatProps) {
   return (
-    <IconCatBlock color={color}>
+    <IconCatBlock
+      color={color}
+      onMouseEnter={() => onMouseEnter?.()}
+      onMouseLeave={() => onMouseLeave?.()}
+    >
       <CatImage src="/ttokangPixel.png" width={86} height={86} alt="또깡고양이" hover={hover} />
     </IconCatBlock>
   );
