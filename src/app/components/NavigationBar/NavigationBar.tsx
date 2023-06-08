@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HomeIcon, CommandIcon, SearchIcon } from '../Icon';
+import { HomeIcon, CommandIcon, SearchIcon, UserIcon } from '../Icon';
 import NextLink from 'next/link';
 
 function NavigationBar() {
@@ -23,7 +23,12 @@ function NavigationBar() {
           검색
         </Li>
       </Link>
-      <h1>로그인/가입</h1>
+      <Link href="/signup">
+        <Li>
+          <UserIcon />
+          로그인/가입
+        </Li>
+      </Link>
     </Ul>
   );
 }
@@ -33,6 +38,8 @@ const Ul = styled.ul`
   justify-content: space-between;
   padding: none;
   margin: none;
+  height:78px;
+  padding: 0 35px;
 `;
 
 const Link = styled(NextLink)`
