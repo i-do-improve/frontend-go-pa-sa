@@ -1,16 +1,24 @@
 'use client';
 
 import styled from 'styled-components';
+import { SelectCats } from './sections';
 
 export default function Home() {
   return (
     <Main>
-      Home 테스트
+      <SelectCatsWrapper>
+        <SelectCats />
+      </SelectCatsWrapper>
     </Main>
   );
 }
 
 const Main = styled.main`
-  height: 100vh;
   font-size: 50px;
+`;
+
+const SelectCatsWrapper = styled.section`
+  display: flex;
+  justify-content: center;
+  padding: 0 35px;
 `;
