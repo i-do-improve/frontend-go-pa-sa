@@ -11,6 +11,5 @@ export default function Home() {
 }
 
 const Main = styled.main`
-  height: 100vh;
   font-size: 50px;
 `;
