@@ -2,10 +2,12 @@
 
 import styled from 'styled-components';
 import { SelectCats } from './sections';
+import { Header } from './components';
 
 export default function Home() {
   return (
     <Main>
+      <Header />
       <SelectCatsWrapper>
         <SelectCats />
       </SelectCatsWrapper>
@@ -13,7 +15,7 @@ export default function Home() {
   );
 }
 
-const Main = styled.main`
+const Main = styled.div`
   font-size: 50px;
 `;
 
