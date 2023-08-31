@@ -43,8 +43,6 @@ const Link = styled(NextLink)`
 
 const BackButton = styled.button`
   cursor: pointer;
-  background-color: transparent;
-  border: none;
 `;
 
 export default Header;
