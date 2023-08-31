@@ -28,7 +28,6 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="ko" className={`${roboto.variable} ${poppins.variable}`}>
       <body>
-        <Header />
         <Main>
           {children}
         </Main>
@@ -39,5 +38,5 @@ export default function RootLayout({ children }: LayoutProps) {
 }
 
 const Main = styled.main`
-  height: calc(100vh - 78px - 44px);
+  height: calc(100vh - 78px);
 `;

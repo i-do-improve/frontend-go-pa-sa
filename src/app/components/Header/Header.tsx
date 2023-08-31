@@ -1,13 +1,29 @@
 import styled from 'styled-components';
 import { Logo } from '..';
 import NextLink from 'next/link';
+import { useRouter } from 'next/navigation';
+import { BackFillIcon } from '../Icon';
 
-function Header() {
+interface HeaderProps {
+  enabledLogo?: boolean;
+  enabledBack?: boolean;
+}
+
+function Header({ enabledLogo = true, enabledBack = false }: HeaderProps) {
+  const router = useRouter();
+
   return (
     <HeaderBlock>
-      <NextLink href="/">
-        <Logo />
-      </NextLink>
+      {enabledLogo && (
+        <Link href="/">
+          <Logo />
+        </Link>
+      )}
+      {enabledBack && (
+        <BackButton onClick={() => router.back()}>
+          <BackFillIcon />
+        </BackButton>
+      )}
     </HeaderBlock>
   );
 }
@@ -18,6 +34,15 @@ const HeaderBlock = styled.header`
   align-items: center;
   height: 44px;
   padding: 0 35px;
+`;
+
+const Link = styled(NextLink)`
+  display: flex;
+  align-items: center;
+`;
+
+const BackButton = styled.button`
+  cursor: pointer;
 `;
 
 export default Header;
